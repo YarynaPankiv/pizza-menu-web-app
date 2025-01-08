@@ -1,0 +1,99 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logoContainer {
+  flex: 1;
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.logoIcon {
+  font-size: 32px;
+  color: #ff9a00;
+}
+
+.linksContainer {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.titles {
+  color: #ff9a00;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.titles:hover {
+  color: #ff5e19;
+}
+
+.userContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.button {
+  background-color: #ff9a00;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #ff5e19;
+}
+
+.cartButton {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cartButton:hover {
+  background-color: #444;
+}
+
+.userIcon {
+  color: #ff9a00;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.userIcon:hover {
+  color: #ff5e19;
+}

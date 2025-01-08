@@ -1,0 +1,35 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.socialLinks a {
+  color: #ff9a00;
+  transition: color 0.3s;
+}
+
+.socialLinks a:hover {
+  color: #e68900;
+}
+
+.socialLinks svg {
+  font-size: 24px;
+}

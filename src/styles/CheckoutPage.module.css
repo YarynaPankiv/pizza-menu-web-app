@@ -1,0 +1,146 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.image {
+  width: 140px;
+  height: 120px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.details {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.itemName {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.itemDescription,
+.itemCategory {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff7d4f;
+}
+
+.cartSummary {
+  margin-bottom: 20px;
+}
+
+.cartList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.itemName {
+  font-size: 16px;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.total {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.textarea {
+  height: 80px;
+  resize: none;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #ff7d4f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  background-color: #e7693b;
+}
+
+.successMessage {
+  text-align: center;
+  color: #4caf50;
+  font-size: 18px;
+}

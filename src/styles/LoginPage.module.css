@@ -1,0 +1,79 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ffe6cc, #fbd8aa); /* Soft gradient */
+  padding: 20px;
+}
+
+.formContainer {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ff9a00; /* Highlight border on focus */
+}
+
+.button {
+  padding: 15px;
+  background-color: #ff9a00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #e68900;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.registerLink {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.registerLink a {
+  color: #ff9a00;
+  text-decoration: none;
+}
+
+.registerLink a:hover {
+  text-decoration: underline;
+}

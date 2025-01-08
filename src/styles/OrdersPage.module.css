@@ -1,0 +1,224 @@
+/* src/styles/OrdersPage.module.css */
+
+/* Основні кольори */
+:root {
+  --primary-color: #3498db; /* Синій */
+  --secondary-color: #2ecc71; /* Зелений */
+  --danger-color: #e74c3c; /* Червоний */
+  --warning-color: #f1c40f; /* Жовтий */
+  --background-color: #f9f9f9; /* Світло-сірий */
+  --text-color: #2c3e50; /* Темно-сірий */
+  --light-text-color: #ecf0f1; /* Світло-сірий для тексту */
+  --border-color: #ddd; /* Сірий для меж */
+  --hover-bg-color: #f1f1f1; /* Світлий фон при наведенні */
+}
+
+/* Контейнер сторінки */
+.container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+/* Заголовок сторінки */
+.title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Таблиця замовлень */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: var(--hover-bg-color);
+}
+
+/* Списки товарів у замовленні */
+.table ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table li {
+  margin-bottom: 5px;
+  padding: 4px 8px;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* Статуси замовлень */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.status.pending {
+  color: var(--warning-color);
+}
+
+.status.completed {
+  color: var(--secondary-color);
+}
+
+.status.canceled {
+  color: var(--danger-color);
+}
+
+.status .icon {
+  font-size: 18px;
+}
+
+/* Випадаючий список для статусу */
+.statusSelect {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.statusSelect:hover {
+  border-color: var(--primary-color);
+}
+
+.statusSelect:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Індикатор завантаження при оновленні статусу */
+.loadingIcon {
+  margin-left: 8px;
+  color: var(--primary-color);
+}
+
+/* Повідомлення про помилки */
+.error {
+  color: var(--danger-color);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Повідомлення про завантаження */
+.loading {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+  .table th,
+  .table td {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .table th {
+    font-size: 14px;
+  }
+
+  .table li {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+
+  .status .icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .table li {
+    font-size: 11px;
+    padding: 1px 4px;
+  }
+
+  .status .icon {
+    font-size: 14px;
+  }
+}

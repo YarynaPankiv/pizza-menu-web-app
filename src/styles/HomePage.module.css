@@ -1,0 +1,196 @@
+/* HomePage.module.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* height: 100vh; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 410px;
+
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+}
+
+.heroText {
+  position: relative;
+
+  text-align: center;
+  color: #fff;
+  padding-top: 100px;
+}
+
+.title {
+  font-size: 64px;
+  font-family: "Abril Fatface", serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 32px;
+  font-family: "Abril Fatface", serif;
+  margin: 10px 0 20px;
+}
+
+.menu_button {
+  background-color: #ff9a00;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.menu_button:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.infoText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  /* margin-top: 20px; */
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ff9a00;
+  padding: 10px;
+  gap: 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.infoText p {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #555;
+}
+
+.feedback_p {
+  font-family: "Abril Fatface", serif;
+  align-self: flex-start;
+  font-size: 40px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.reviewSection {
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.reviewTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: start;
+}
+
+.reviewLine {
+  width: 100%;
+  height: 3px;
+  background-color: #ff9a00;
+  margin: 0.5rem auto 1rem;
+  border-radius: 5px;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem 0;
+  gap: 1rem;
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: #ff9a00 transparent; */
+}
+
+/* .scrollContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #ff9a00;
+  border-radius: 5px;
+} */
+
+.reviewCard {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.userAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  border: 2px solid #ff9a00;
+}
+
+.userName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.reviewText {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.reviewDate {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.noReviews {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+.pizzaImage {
+  width: 200px;
+}
