@@ -22,7 +22,9 @@ export default function MenuPage() {
   useEffect(() => {
     const fetchPizzas = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/items");
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_BASE_URL}/items`
+        );
         setItems(response.data);
         setFilteredPizzas(response.data); // Set pizzas initially as all
       } catch (error) {

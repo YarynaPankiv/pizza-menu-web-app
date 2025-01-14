@@ -36,12 +36,15 @@ export default function CheckoutPage() {
   const handleOrderSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/add-order", {
-        userId: user.uid, // або з контексту користувача
-        items: cartItems,
-        total,
-        contactInfo: formData,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_BASE_URL}/add-order`,
+        {
+          userId: user.uid, // або з контексту користувача
+          items: cartItems,
+          total,
+          contactInfo: formData,
+        }
+      );
 
       console.log("Order response:", response.data);
       clearCart(); // Очищення кошика

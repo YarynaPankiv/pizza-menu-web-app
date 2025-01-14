@@ -24,7 +24,9 @@ export default function AddPizzaPage({ isEdit = false }) {
     if (isEdit && id) {
       const fetchItems = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/item/${id}`);
+          const response = await axios.get(
+            `${process.env.REACT_APP_API_BASE_URL}/item/${id}`
+          );
           setFormData(response.data); // Завантажуємо дані в форму
         } catch (err) {
           setError("Не вдалося завантажити дані.");
@@ -47,11 +49,17 @@ export default function AddPizzaPage({ isEdit = false }) {
     try {
       if (isEdit) {
         // Редагування піци
-        await axios.put(`http://localhost:5000/item/${id}`, formData);
+        await axios.put(
+          `${process.env.REACT_APP_API_BASE_URL}/item/${id}`,
+          formData
+        );
         setSuccess("Піцу успішно оновлено!");
       } else {
         // Додавання нової піци
-        await axios.post("http://localhost:5000/add-item", formData);
+        await axios.post(
+          `${process.env.REACT_APP_API_BASE_URL}/add-item`,
+          formData
+        );
         setSuccess("Піцу успішно додано!");
         setFormData({
           name: "",
@@ -74,7 +82,7 @@ export default function AddPizzaPage({ isEdit = false }) {
   const handleDelete = async () => {
     try {
       // Відправка запиту на видалення піци за її ID
-      await axios.delete(`http://localhost:5000/item/${id}`);
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/item/${id}`);
 
       // Виведення повідомлення про успіх
       setSuccess("Товар успішно видалено!");
