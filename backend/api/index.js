@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
 const allowedOrigins = [
   "https://pizza-menu-web-app.vercel.app", // Ваш фронтенд-домен
   "http://localhost:3000", // Локальний фронтенд для тестування
