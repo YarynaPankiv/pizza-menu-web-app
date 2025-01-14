@@ -4,20 +4,26 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Дозволити всі домени
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-  );
-  if (req.method === "OPTIONS") {
-    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
-    return res.status(200).json({});
-  }
-  next();
-});
+const allowedOrigins = [
+  "https://pizza-menu-web-app.vercel.app", // Ваш фронтенд-домен
+  "http://localhost:3000", // Локальний фронтенд для тестування
+];
+
+// Налаштування CORS
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Дозволити запити лише з дозволених доменів
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // Якщо потрібні куки чи заголовки авторизації
+  })
+);
 
 try {
   admin.initializeApp({
