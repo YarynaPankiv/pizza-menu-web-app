@@ -7,11 +7,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const serviceAccount = require("./serviceAccountKey.json");
-
 try {
   admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert({
+      projectId: process.env.PROJECT_ID,
+      clientEmail: process.env.CLIENT_EMAIL,
+      privateKey: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"), // Замінюємо \n на реальні символи нового рядка
+    }),
     databaseURL:
       "https://pizza-web-app-default-rtdb.europe-west1.firebasedatabase.app/",
   });
@@ -455,8 +457,4 @@ app.put("/order/:id/status", checkAdmin, async (req, res) => {
   }
 });
 
-// Start Server
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+module.exports = app;
