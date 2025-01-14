@@ -6,6 +6,24 @@ const cors = require("cors");
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+const allowedOrigins = [
+  "https://pizza-menu-web-app.vercel.app", // Ваш фронтенд-домен
+  "http://localhost:3000", // Локальний фронтенд для тестування
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Дозволити запити, якщо походять із дозволених доменів
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // Якщо потрібно відправляти куки чи заголовки авторизації
+  })
+);
 
 try {
   admin.initializeApp({
